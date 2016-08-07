@@ -1,3 +1,3 @@
-# revolution_slider_plugin
+# revolution slider plugin for Pinegrow
 
-These are JS/CSS files for Pinegrow's Revolution Slider Plugin. for more details regarding Pinegrow visit http://pinegrow.com/
+This is new and updated version of Revolution slider , which includes all css/js files locally, for pinegrow just visit http://pinegrow.com/ and download the 7 days trial.
