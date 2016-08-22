@@ -29,15 +29,26 @@ $(function() {
 
             return '<div id="' + id + '" class="rev_slider">\
                 <ul>\
-                    <li data-transition="slideleft" data-slotamount="1" >\
-                        <img src="' + img1 + '">\
-                    </li>\
-                    <li data-transition="slideleft" data-slotamount="1" >\
-                        <img src="' + img2 + '">\
-                    </li>\
-                    <li data-transition="slideleft" data-slotamount="1" >\
-                        <img src="' + img3 + '">\
-                    </li>\
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >\
+                    <img src="$IMAGE_URL"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">\
+                    <div class="tp-caption lightgrey_divider skewfromrightshort fadeout"\
+                        data-x="85"\
+                        data-y="224"\
+                        data-speed="500"\
+                        data-start="1200"\
+                        data-easing="Power4.easeOut">My Caption\
+                    </div>\
+                </li>\
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >\
+                    <img src="$IMAGE_URL"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">\
+                    <div class="tp-caption lightgrey_divider skewfromrightshort fadeout"\
+                        data-x="85"\
+                        data-y="224"\
+                        data-speed="500"\
+                        data-start="1200"\
+                        data-easing="Power4.easeOut">My Caption\
+                    </div>\
+                </li>\
                 </ul>\
             </div>';
         };
@@ -122,9 +133,16 @@ $(function() {
         slide.code = function() {
             var img1 = pinegrow.getPlaceholderImage();
 
-            return '<li data-transition="slideleft" data-slotamount="1" data-thumb="' + pinegrow.getThumbnailForPlaceholderImage(img1) + '">\
-                        <img src="' + img1 + '">\
-                    </li>';
+            return '<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >\
+                    <img src="$IMAGE_URL"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">\
+                    <div class="tp-caption lightgrey_divider skewfromrightshort fadeout"\
+                        data-x="85"\
+                        data-y="224"\
+                        data-speed="500"\
+                        data-start="1200"\
+                        data-easing="Power4.easeOut">My Caption\
+                    </div>\
+                </li>';
         };
 
         var gotoSlide = function($el) {
