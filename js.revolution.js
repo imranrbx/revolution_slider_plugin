@@ -197,20 +197,29 @@ $(function() {
         r.footer = false; //Recommended for JS files.
         f.resources.add(r);
 
+
         var r = new PgComponentTypeResource(f.getResourceFile('./src/css/settings.css')); //relative to plugin js file
         r.relative_url = 'src/css/settings.css'; //what should the relative url be when resource is used on the page
         r.source = crsaMakeFileFromUrl(r.url);
         r.footer = false; //Recommended for JS files.
         f.resources.add(r);
 
+        var r = new PgComponentTypeResource('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js');
+        r.type = 'application/javascript';
+        r.detect = /jquery/;
+        r.footer = true;
+        f.resources.add(r);
+
         r = new PgComponentTypeResource(f.getResourceFile('./src/js/jquery.themepunch.tools.min.js')); //relative to plugin js file
         r.relative_url = 'src/js/jquery.themepunch.tools.min.js'; //what should the relative url be when resource is used on the page
+        r.type = 'application/javascript';
         r.source = crsaMakeFileFromUrl(r.url);
         r.footer = true; //Recommended for JS files.
         f.resources.add(r);
         
         r = new PgComponentTypeResource(f.getResourceFile('./src/js/jquery.themepunch.revolution.min.js'));
         r.relative_url = 'src/js/jquery.themepunch.revolution.min.js';
+        r.type = 'application/javascript';
         r.source = crsaMakeFileFromUrl(r.url);
         r.footer = true;
         f.resources.add(r);
