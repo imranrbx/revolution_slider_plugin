@@ -191,18 +191,24 @@ $(function() {
         }
         //That's it!!! Simple, right? A lot of magic stuff could be done here, check Bootstrap framework for inspiration.
         //Add resources that will be copied to components/<plugin> folder and included in the page with Pinegrow Resource manager when the plugin is first activated on a page or when Resources command is used in "Manage libraries and plugins".
+        var r = new PgComponentTypeResource(f.getResourceFile('./src/css/captions-original.css')); //relative to plugin js file
+        r.relative_url = 'src/css/captions-original.css'; //what should the relative url be when resource is used on the page
+        r.source = crsaMakeFileFromUrl(r.url);
+        r.footer = false; //Recommended for JS files.
+        f.resources.add(r);
+
         var r = new PgComponentTypeResource(f.getResourceFile('./src/css/settings.css')); //relative to plugin js file
         r.relative_url = 'src/css/settings.css'; //what should the relative url be when resource is used on the page
         r.source = crsaMakeFileFromUrl(r.url);
         r.footer = false; //Recommended for JS files.
         f.resources.add(r);
 
-        r = new PgComponentTypeResource(f.getResourceFile('./src/js/jquery.themepunch.plugins.min.js')); //relative to plugin js file
-        r.relative_url = 'src/js/jquery.themepunch.plugins.min.js'; //what should the relative url be when resource is used on the page
+        r = new PgComponentTypeResource(f.getResourceFile('./src/js/jquery.themepunch.tools.min.js')); //relative to plugin js file
+        r.relative_url = 'src/js/jquery.themepunch.tools.min.js'; //what should the relative url be when resource is used on the page
         r.source = crsaMakeFileFromUrl(r.url);
         r.footer = true; //Recommended for JS files.
         f.resources.add(r);
-
+        
         r = new PgComponentTypeResource(f.getResourceFile('./src/js/jquery.themepunch.revolution.min.js'));
         r.relative_url = 'src/js/jquery.themepunch.revolution.min.js';
         r.source = crsaMakeFileFromUrl(r.url);
